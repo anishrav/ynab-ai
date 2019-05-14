@@ -46,27 +46,12 @@
 * time_activity
     - action_activity
 
-## Generated Story 4429083282385392901
-* greet
-    - utter_name
-* name{"name": "anish"}
-    - slot{"name": "anish"}
-    - utter_greet
-* time_activity
-    - action_activity
-* time_activity
-    - action_activity
-* time_activity
-    - action_activity
-* thanks
-    - utter_thanks
-
 ## Generated Story -3561406666104549948
 * name{"name": "Robert"}
     - slot{"name": "Robert"}
     - utter_greet
-* time_activity{"budget_action": "spent", "time_unit": "week"}
-    - slot{"budget_action": "spent"}
+* time_activity{"budget_action": "spend", "time_unit": "week"}
+    - slot{"budget_action": "spend"}
     - action_activity
 * time_activity{"time_unit": "month"}
     - action_activity
@@ -83,8 +68,8 @@
 * name{"name": "robert"}
     - slot{"name": "robert"}
     - utter_greet
-* time_activity{"budget_action": "spent", "time_unit": "year"}
-    - slot{"budget_action": "spent"}
+* time_activity{"budget_action": "spend", "time_unit": "year"}
+    - slot{"budget_action": "spend"}
     - slot{"time_unit": "year"}
 
 ## Generated Story 2923123503699977302
