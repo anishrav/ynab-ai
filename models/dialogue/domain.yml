@@ -1,0 +1,66 @@
+%YAML 1.1
+---
+actions:
+- utter_goodbye
+- action_activity
+- utter_name
+- utter_greet
+- utter_thanks
+config:
+  store_entities_as_slots: true
+entities:
+- budget_action
+- name
+- time_unit
+- time_count
+forms: []
+intents:
+- time_activity:
+    use_entities: true
+- name:
+    use_entities: true
+- greet:
+    use_entities: true
+- thanks:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- deny:
+    use_entities: true
+slots:
+  budget_action:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - spend
+    - spent
+    - budget
+    - save
+    - waste
+  name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  time_count:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  time_unit:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - day
+    - week
+    - month
+    - year
+templates:
+  utter_goodbye:
+  - text: Talk to you later!
+  utter_greet:
+  - text: Nice to you meet you {name}. How can I help?
+  utter_name:
+  - text: Hey there! Tell me your name.
+  utter_thanks:
+  - text: My pleasure.

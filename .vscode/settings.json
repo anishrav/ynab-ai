@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/Users/anishravipati/anaconda3/envs/py3/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pydocstyleEnabled": false,
+    "python.linting.enabled": true
+}
