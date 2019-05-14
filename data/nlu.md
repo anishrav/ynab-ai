@@ -119,26 +119,26 @@
 - Cool! Thanks!
 
 ## intent:time_activity
-- How much have I [spent](budget_action) this [month](time_unit)?
+- How much have I [spent](budget_action:spend) this [month](time_unit)?
 - This [month](time_unit), how much did I [spend](budget_action)?
 - How much money [left](budget_action) my account this [month](time_unit)?
 - How much did I [budget](budget_action) this [month](time_unit)?
 - How much did I [put](budget_action) in the budget this [month](time_unit)?
 - Give me an overview of the [month](time_unit).
-- I want to know how much I [spent](budget_action) last [month](time_unit)
+- I want to know how much I [spent](budget_action:spend) last [month](time_unit)
 - But how much did I [budget](budget_action)?
-- Oh okay - now I want to know how much I [spent](budget_action) last [week](time_unit)
-- I want to know how much I [spent](budget_action) last [week](time_unit)
+- Oh okay - now I want to know how much I [spent](budget_action:spend) last [week](time_unit)
+- I want to know how much I [spent](budget_action:spend) last [week](time_unit)
 - Cool - how about last [month](time_unit)?
 - What about in the last [two](time_count) [weeks](time_unit)?
 - What about in the last [two](time_count) [years](time_unit)?
 - Okay, how much did I [budget](budget_action) last [month](time_unit)?
 - How much did I [spend](budget_action) this past [year](time_unit)?
-- I want to know how much I [spent](budget_action) last [year](time_unit)
+- I want to know how much I [spent](budget_action:spend) last [year](time_unit)
 - How much did I [spend](budget_action) this past [year](time_unit)?
 - How much did I [budget](budget_action)?
 - How much did I [spend](budget_action) last [week](time_unit)?
-- Tell me how much I [budgeted](budget_action) last [month](time_unit)
+- Tell me how much I [budgeted](budget_action:budget) last [month](time_unit)
 - How much did I [spend](budget_action) last [week](time_unit)?
 - How much did I [spent](budget_action:spend) last [week](time_unit)?
 - How much did I [budgeted](budget_action:budget) last [year](time_unit)?
