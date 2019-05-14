@@ -1,15 +1,15 @@
 %YAML 1.1
 ---
 actions:
-- utter_greet
 - action_activity
-- utter_goodbye
 - utter_name
+- utter_greet
 - utter_thanks
+- utter_goodbye
 entities:
-- budget_action
-- time_unit
 - time_count
+- time_unit
+- budget_action
 - name
 intents:
 - time_activity
@@ -24,8 +24,6 @@ slots:
     values:
     - spend
     - budget
-    - save
-    - waste
   name:
     type: text
   time_count:

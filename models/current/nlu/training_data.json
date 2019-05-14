@@ -158,6 +158,10 @@
         "text": "Hello"
       },
       {
+        "intent": "greet",
+        "text": "Hey"
+      },
+      {
         "intent": "name",
         "entities": [
           {
@@ -794,6 +798,18 @@
         "text": "My name is Robert"
       },
       {
+        "intent": "name",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "anish",
+            "entity": "name"
+          }
+        ],
+        "text": "Name is Anish"
+      },
+      {
         "intent": "thanks",
         "text": "Thanks"
       },
@@ -863,7 +879,7 @@
           {
             "start": 16,
             "end": 21,
-            "value": "spent",
+            "value": "spend",
             "entity": "budget_action"
           },
           {
@@ -965,7 +981,7 @@
           {
             "start": 26,
             "end": 31,
-            "value": "spent",
+            "value": "spend",
             "entity": "budget_action"
           },
           {
@@ -995,7 +1011,7 @@
           {
             "start": 40,
             "end": 45,
-            "value": "spent",
+            "value": "spend",
             "entity": "budget_action"
           },
           {
@@ -1013,7 +1029,7 @@
           {
             "start": 26,
             "end": 31,
-            "value": "spent",
+            "value": "spend",
             "entity": "budget_action"
           },
           {
@@ -1115,7 +1131,7 @@
           {
             "start": 26,
             "end": 31,
-            "value": "spent",
+            "value": "spend",
             "entity": "budget_action"
           },
           {
@@ -1181,7 +1197,7 @@
           {
             "start": 19,
             "end": 27,
-            "value": "budgeted",
+            "value": "budget",
             "entity": "budget_action"
           },
           {
@@ -1192,6 +1208,360 @@
           }
         ],
         "text": "Tell me how much I budgeted last month"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 26,
+            "end": 30,
+            "value": "week",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend last week?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 26,
+            "end": 30,
+            "value": "week",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spent last week?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "budget",
+            "entity": "budget_action"
+          },
+          {
+            "start": 29,
+            "end": 33,
+            "value": "year",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I budgeted last year?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 19,
+            "value": "budget",
+            "entity": "budget_action"
+          },
+          {
+            "start": 25,
+            "end": 30,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I save last month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          }
+        ],
+        "text": "How much did I spend?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          }
+        ],
+        "text": "How much did I spent?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 19,
+            "end": 29,
+            "value": "budget",
+            "entity": "budget_action"
+          },
+          {
+            "start": 35,
+            "end": 39,
+            "value": "year",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "Tell me how much I kept aside last year"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "spend",
+            "entity": "budget_action"
+          }
+        ],
+        "text": "Cool, how much did I spend?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          }
+        ],
+        "text": "But how much I spent?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend this past month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend this past month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend this past month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend this past month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend this past month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 34,
+            "end": 37,
+            "value": "two",
+            "entity": "time_count"
+          },
+          {
+            "start": 38,
+            "end": 43,
+            "value": "week",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much have I spent in the past two weeks?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend this past month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 26,
+            "end": 31,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend last month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 26,
+            "end": 31,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend last month?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 33,
+            "end": 36,
+            "value": "two",
+            "entity": "time_count"
+          },
+          {
+            "start": 37,
+            "end": 43,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend in the last two months?"
+      },
+      {
+        "intent": "time_activity",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "spend",
+            "entity": "budget_action"
+          },
+          {
+            "start": 33,
+            "end": 34,
+            "value": "2",
+            "entity": "time_count"
+          },
+          {
+            "start": 35,
+            "end": 41,
+            "value": "month",
+            "entity": "time_unit"
+          }
+        ],
+        "text": "How much did I spend in the last 2 months?"
       }
     ],
     "regex_features": [],
@@ -1210,29 +1580,52 @@
         ]
       },
       {
-        "value": "budget",
-        "synonyms": [
-          "save",
-          "budgeted",
-          "kept aside"
-        ]
-      },
-      {
-        "value": "month",
-        "synonyms": [
-          "months"
-        ]
-      },
-      {
         "value": "spend",
         "synonyms": [
-          "spent"
+          "spent",
+          "expend",
+          "invest",
+          "invested",
+          "used",
+          "use",
+          "waste",
+          "wasted"
+        ]
+      },
+      {
+        "value": "budget",
+        "synonyms": [
+          "budgeted",
+          "save",
+          "kept aside",
+          "allocate",
+          "allot",
+          "allotted",
+          "assign",
+          "assigned",
+          "allow",
+          "allowed",
+          "earmark",
+          "earmarked",
+          "devote",
+          "devoted",
+          "designate",
+          "designated",
+          "appropriate",
+          "appropriated",
+          "set aside"
         ]
       },
       {
         "value": "week",
         "synonyms": [
           "weeks"
+        ]
+      },
+      {
+        "value": "month",
+        "synonyms": [
+          "months"
         ]
       },
       {
