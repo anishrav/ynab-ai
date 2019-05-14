@@ -11,8 +11,6 @@ from rasa_core_sdk import Action
 
 logger = logging.getLogger(__name__)
 
-api_token = '17146f6fb9d2cb9274e173a720d319a62ca835c87e32ea44f67cc020cbb8f05a'
-
 
 class ActionJoke(Action):
     def name(self):

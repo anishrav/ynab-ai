@@ -2,3 +2,6 @@ __pycache__
 env/
 
 rasa_core.log
+keys.js
+action-server/node_modules/*
+.gitsecret/keys/random_seed
