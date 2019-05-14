@@ -148,13 +148,24 @@
 - Tell me how much I [kept aside](budget_action:budget) last [year](time_unit)
 - Cool, how much did I [spend](budget_action)?
 - But how much I [spent](budget_action:spend)?
+- How much did I [spend](budget_action) this past [month](time_unit)?
+- How much did I [spend](budget_action) this past [month](time_unit)?
+- How much did I [spend](budget_action) this past [month](time_unit)?
+- How much did I [spend](budget_action) this past [month](time_unit)?
+- How much did I [spend](budget_action) this past [month](time_unit)?
+- How much have I [spent](budget_action:spend) in the past [two](time_count) [weeks](time_unit:week)?
+- How much did I [spend](budget_action) this past [month](time_unit)?
+- How much did I [spend](budget_action) last [month](time_unit)?
+- How much did I [spend](budget_action) last [month](time_unit)?
+- How much did I [spend](budget_action) in the last [two](time_count) [months](time_unit:month)?
+- How much did I [spend](budget_action) in the last [2](time_count) [months](time_unit:month)?
 
 ## synonym:anish
 - Anish
 
 ## synonym:budget
-- save
 - budgeted
+- save
 - kept aside
 - allocate
 - allot

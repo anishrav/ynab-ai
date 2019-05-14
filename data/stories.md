@@ -128,3 +128,52 @@
     - slot{"budget_action": "spend"}
     - action_activity
 
+## Generated Story -5902799975601714862
+* time_activity{"budget_action": "spend", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_count": "two", "time_unit": "week"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_count": "two"}
+    - slot{"time_unit": "week"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_count": "two", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_count": "two"}
+    - slot{"time_unit": "month"}
+    - action_activity
+* time_activity{"budget_action": "spend", "time_count": "2", "time_unit": "month"}
+    - slot{"budget_action": "spend"}
+    - slot{"time_count": "2"}
+    - slot{"time_unit": "month"}
+    - action_activity
+
