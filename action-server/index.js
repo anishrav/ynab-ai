@@ -123,12 +123,6 @@ function handleMessage(req, res) {
         
         // if budget_action == 'budget':
             // get budget + timeframe
-
-
-        // ynabAPI.transactions
-        //     .getTransactions(budget_id, '2019-04-30')
-        //     .then(res => console.log(res.data.transactions));
-        
         
     }
 }
