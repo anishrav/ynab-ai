@@ -26,12 +26,12 @@ fetch('http://api.youneedabudget.com/v1/budgets/', {
     })
     .then( response => response.json() )
     .then( json => {
+        console.log(json);
         budget_id = json['data']['budgets'][0]['id'];
      })
     .then(() => {
-        
     })
-    .catch( e => console.log(e));
+    .catch(e => console.error(e));
 
 
 function handleMessage(req, res) {
@@ -41,7 +41,6 @@ function handleMessage(req, res) {
     console.log(`slots:`);
     console.log(incoming_request['tracker']['slots']);
     if (incoming_request['next_action'] === "action_activity") {
-        console.log("activity");
         // pull budget_action, time_count and time_unit from slots
         let action = incoming_request['tracker']['slots']['budget_action'];
         let time_count = parseInt(incoming_request['tracker']['slots']['time_count']);
@@ -80,7 +79,6 @@ function handleMessage(req, res) {
                     since_date: today.toISOString()
                 }
             });
-            console.log(api_url);
 
             fetch(api_url, {
                 method: 'get',
@@ -90,7 +88,6 @@ function handleMessage(req, res) {
             })
             .then( response => response.json() )
             .then( json => {
-                // console.log(json.data.transactions);
                 transactions = json.data.transactions;
 
                 // calculate total amount of outflow
@@ -117,13 +114,12 @@ function handleMessage(req, res) {
                 res.json(response);
                 return;
             })
-            .catch( e => console.log(e));
+            .catch( e => console.error(e));
 
         }
 
         if (action === 'budget') {
             // pull all categories from YNAB API
-            let categories = [];
             let api_url = url.format({
                 protocol: 'https',
                 hostname: `api.youneedabudget.com`,
@@ -137,6 +133,7 @@ function handleMessage(req, res) {
             })
             .then(res => res.json())
             .then(json => {
+                let categories = [];
                 // iterate through response to add category id's to categories
                 for (let category_group of json.data.category_groups) {
                     for (let category of category_group.categories) {
@@ -144,9 +141,65 @@ function handleMessage(req, res) {
                     }
                 }
 
-                console.log(categories);
+                return categories;
             })
-            .catch(e => console.log(e));
+            
+        let api_url = url.format({
+            protocol: 'https',
+            hostname: `api.youneedabudget.com`,
+            pathname: `v1/budgets/${budget_id}/categories`
+        });
+        fetch(api_url, {
+            method: 'get',
+            headers: new Headers({
+                'Authorization': 'Bearer ' + accessToken
+            })
+        })
+        .then(res => res.json())
+        .then(json => {
+            let categories = [];
+            // iterate through response to add category id's to categories
+            for (let category_group of json.data.category_groups) {
+                for (let category of category_group.categories) {
+                    categories.push(category.id);
+                }
+            }
+
+            return categories;
+        })
+        .then(categories => {
+            console.log(categories);
+            let today = new Date();
+            let time_count = 1;
+            today.setMonth(today.getMonth() - time_count);
+            let budgeted_amount = 0;
+            for (let i = 0; i <= time_count; i++) {
+                today.setMonth(today.getMonth() + i);
+                let month = today.toISOString();
+                
+                for (category of categories){
+                    api_url = url.format({
+                        protocol: 'https',
+                        hostname: `api.youneedabudget.com`,
+                        pathname: `v1/budgets/${budget_id}/months/${month}/categories/${category}`
+                    });
+
+                    fetch(api_url, {
+                        method: 'get',
+                        headers: new Headers({
+                            'Authorization': 'Bearer ' + accessToken
+                        })
+                    })
+                    .then(res => res.json())
+                    .then(json => {
+                        console.log(json);
+                        budgeted_amount += json.data.category.budgeted;
+                    })
+                    .catch(e => console.error(e));
+                }
+            }
+        })
+            .catch(e => console.error(e));
         }
         
     }
