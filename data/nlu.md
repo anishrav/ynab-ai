@@ -130,8 +130,8 @@
 - Oh okay - now I want to know how much I [spent](budget_action:spend) last [week](time_unit)
 - I want to know how much I [spent](budget_action:spend) last [week](time_unit)
 - Cool - how about last [month](time_unit)?
-- What about in the last [two](time_count) [weeks](time_unit)?
-- What about in the last [two](time_count) [years](time_unit)?
+- What about in the last [2](time_count) [weeks](time_unit)?
+- What about in the last [2](time_count) [years](time_unit)?
 - Okay, how much did I [budget](budget_action) last [month](time_unit)?
 - How much did I [spend](budget_action) this past [year](time_unit)?
 - I want to know how much I [spent](budget_action:spend) last [year](time_unit)
@@ -149,16 +149,13 @@
 - Cool, how much did I [spend](budget_action)?
 - But how much I [spent](budget_action:spend)?
 - How much did I [spend](budget_action) this past [month](time_unit)?
-- How much did I [spend](budget_action) this past [month](time_unit)?
-- How much did I [spend](budget_action) this past [month](time_unit)?
-- How much did I [spend](budget_action) this past [month](time_unit)?
-- How much did I [spend](budget_action) this past [month](time_unit)?
-- How much have I [spent](budget_action:spend) in the past [two](time_count) [weeks](time_unit:week)?
+- How much have I [spent](budget_action:spend) in the past [2](time_count) [weeks](time_unit:week)?
 - How much did I [spend](budget_action) this past [month](time_unit)?
 - How much did I [spend](budget_action) last [month](time_unit)?
 - How much did I [spend](budget_action) last [month](time_unit)?
-- How much did I [spend](budget_action) in the last [two](time_count) [months](time_unit:month)?
 - How much did I [spend](budget_action) in the last [2](time_count) [months](time_unit:month)?
+- In the past [3](time_count) [weeks](time_unit:week), how much money have I [saved](budget_action:budget)?
+- In the past [3](time_count) [weeks](time_unit:week), how much money have I [spent](budget_action:spend)?
 
 ## synonym:anish
 - Anish
@@ -166,6 +163,7 @@
 ## synonym:budget
 - budgeted
 - save
+- saved
 - kept aside
 - allocate
 - allot
