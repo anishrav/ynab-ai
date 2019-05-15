@@ -15,8 +15,6 @@ install:
 - pip install rasa_core_sdk --upgrade
 - python -m spacy download en_core_web_md
 - python -m spacy link en_core_web_md en
-script:
-- python -m pytest tests
 jobs:
   include:
   - stage: test
