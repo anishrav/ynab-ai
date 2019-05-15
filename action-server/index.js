@@ -11,7 +11,7 @@ let budget_id = '';
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post('/webhook', (req, res) => handleMessage(req, res));
+app.post('/', (req, res) => handleMessage(req, res));
 
 app.listen(port, () => {
     console.log(`Action server listening on port ${port}!`);
@@ -112,7 +112,7 @@ function handleMessage(req, res) {
                 // handle the activity reponse
                 let response = {};
                 response['responses'] = [];
-                response['responses'].push({'text': `In the past ${time_count} ${time_unit}, you have spent ${amount}.`});
+                response['responses'].push({'text': `In the past ${time_count} ${time_unit}, you have spent $${amount}.`});
                 console.log(response);
                 res.json(response);
                 return;
