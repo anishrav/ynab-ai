@@ -26,10 +26,63 @@ fetch('http://api.youneedabudget.com/v1/budgets/', {
     })
     .then( response => response.json() )
     .then( json => {
-        console.log(json);
         budget_id = json['data']['budgets'][0]['id'];
+        // console.log(budget_id);
      })
     .then(() => {
+        // pull all categories from YNAB API
+        let api_url = url.format({
+            protocol: 'https',
+            hostname: `api.youneedabudget.com`,
+            pathname: `v1/budgets/${budget_id}/categories`
+        });
+        fetch(api_url, {
+            method: 'get',
+            headers: new Headers({
+                'Authorization': 'Bearer ' + accessToken
+            })
+        })
+        .then(res => res.json())
+        .then(json => {
+            let categories = [];
+            // iterate through response to add category id's to categories
+            for (let category_group of json.data.category_groups) {
+                for (let category of category_group.categories) {
+                    categories.push(category.id);
+                }
+            }
+
+            return categories;
+        })
+        .then(categories => {
+            let today = new Date();
+            let time_count = 1;
+            today.setMonth(today.getMonth() - time_count);
+            today.setDate(1)
+            let budgeted_amount = 0;
+            
+            let month = today.toISOString().split('T')[0];
+
+            api_url = url.format({
+                protocol: 'https',
+                hostname: `api.youneedabudget.com`,
+                pathname: `v1/budgets/${budget_id}/months/${month}/categories/${categories[0]}`
+            });
+
+            console.log(api_url);
+
+            fetch(api_url, {
+                method: 'get',
+                headers: new Headers({
+                    'Authorization': 'Bearer ' + accessToken
+                })
+            })
+            .then(res => res.json())
+            .then(json => {
+                console.log(json);
+                budgeted_amount += json.data.category.budgeted;
+            })
+        })
     })
     .catch(e => console.error(e));
 
@@ -56,7 +109,7 @@ function handleMessage(req, res) {
             time_count = 1;
         }
         
-        today = new Date();
+        let today = new Date();
 
         let transactions = [];
         
@@ -143,62 +196,37 @@ function handleMessage(req, res) {
 
                 return categories;
             })
-            
-        let api_url = url.format({
-            protocol: 'https',
-            hostname: `api.youneedabudget.com`,
-            pathname: `v1/budgets/${budget_id}/categories`
-        });
-        fetch(api_url, {
-            method: 'get',
-            headers: new Headers({
-                'Authorization': 'Bearer ' + accessToken
-            })
-        })
-        .then(res => res.json())
-        .then(json => {
-            let categories = [];
-            // iterate through response to add category id's to categories
-            for (let category_group of json.data.category_groups) {
-                for (let category of category_group.categories) {
-                    categories.push(category.id);
-                }
-            }
-
-            return categories;
-        })
-        .then(categories => {
-            console.log(categories);
-            let today = new Date();
-            let time_count = 1;
-            today.setMonth(today.getMonth() - time_count);
-            let budgeted_amount = 0;
-            for (let i = 0; i <= time_count; i++) {
-                today.setMonth(today.getMonth() + i);
-                let month = today.toISOString();
+            .then(categories => {
+                let temp = new Date(today);
+                today.setDate(1)
+                let budgeted_amount = 0;
                 
-                for (category of categories){
-                    api_url = url.format({
-                        protocol: 'https',
-                        hostname: `api.youneedabudget.com`,
-                        pathname: `v1/budgets/${budget_id}/months/${month}/categories/${category}`
-                    });
+                for (let i = 0; i <= time_count; i++) {
+                    today.setMonth(today.getMonth() + i);
+                    let month = today.toISOString().split('T')[0]; // format for YNAB API call
+                    
+                    for (category of categories){
+                        api_url = url.format({
+                            protocol: 'https',
+                            hostname: `api.youneedabudget.com`,
+                            pathname: `v1/budgets/${budget_id}/months/${month}/categories/${category}`
+                        });
 
-                    fetch(api_url, {
-                        method: 'get',
-                        headers: new Headers({
-                            'Authorization': 'Bearer ' + accessToken
+                        fetch(api_url, {
+                            method: 'get',
+                            headers: new Headers({
+                                'Authorization': 'Bearer ' + accessToken
+                            })
                         })
-                    })
-                    .then(res => res.json())
-                    .then(json => {
-                        console.log(json);
-                        budgeted_amount += json.data.category.budgeted;
-                    })
-                    .catch(e => console.error(e));
+                        .then(res => res.json())
+                        .then(json => {
+                            console.log(json);
+                            budgeted_amount += json.data.category.budgeted;
+                        })
+                        .catch(e => console.error(e));
+                    }
                 }
-            }
-        })
+            })
             .catch(e => console.error(e));
         }
         
