@@ -28,12 +28,9 @@ fetch('http://api.youneedabudget.com/v1/budgets/', {
     .then( json => {
         budget_id = json['data']['budgets'][0]['id'];
      })
-     .then( () => {
-         let today = new Date();
-         today.setDate(today.getDate() - 14);
-         
-         
-     })
+    .then(() => {
+        
+    })
     .catch( e => console.log(e));
 
 
@@ -60,20 +57,20 @@ function handleMessage(req, res) {
             time_count = 1;
         }
         
+        today = new Date();
+
+        let transactions = [];
+        
+        if (time_unit === 'month') {
+            today.setMonth(today.getMonth() - time_count);
+        }
+
+        if (time_unit == 'week') {
+            today.setDate(today.getDate() - time_count * 7);
+        }
+
         // if budget_action === 'spend':
         if (action === 'spend') {
-            today = new Date();
-
-            let transactions = [];
-            
-            if (time_unit === 'month') {
-                today.setMonth(today.getMonth() - time_count);
-            }
-
-            if (time_unit == 'week') {
-                today.setDate(today.getDate() - time_count * 7);
-            }
-
             // pull transactions for timeframe
             let api_url = url.format({
                 protocol: 'https',
@@ -100,7 +97,9 @@ function handleMessage(req, res) {
                 let amount = 0;
                 for (let transaction of transactions) {
                     // console.log(transaction.payee_name);
-                    if (transaction.amount < 0 && transaction.cleared == 'cleared' && !transaction.transfer_account_id) {
+                    if (transaction.amount < 0 
+                        && transaction.cleared == 'cleared' 
+                        && !transaction.transfer_account_id) {
                         console.log(transaction.payee_name);
                         amount += transaction.amount;
                     }
@@ -112,7 +111,8 @@ function handleMessage(req, res) {
                 // handle the activity reponse
                 let response = {};
                 response['responses'] = [];
-                response['responses'].push({'text': `In the past ${time_count} ${time_unit}, you have spent $${amount}.`});
+                let text = `In the past ${time_count} ${time_unit}, you have spent $${amount}.`;
+                response['responses'].push({'text': text});
                 console.log(response);
                 res.json(response);
                 return;
@@ -120,9 +120,34 @@ function handleMessage(req, res) {
             .catch( e => console.log(e));
 
         }
-        
-        // if budget_action == 'budget':
-            // get budget + timeframe
+
+        if (action === 'budget') {
+            // pull all categories from YNAB API
+            let categories = [];
+            let api_url = url.format({
+                protocol: 'https',
+                hostname: `api.youneedabudget.com`,
+                pathname: `v1/budgets/${budget_id}/categories`
+            });
+            fetch(api_url, {
+                method: 'get',
+                headers: new Headers({
+                    'Authorization': 'Bearer ' + accessToken
+                })
+            })
+            .then(res => res.json())
+            .then(json => {
+                // iterate through response to add category id's to categories
+                for (let category_group of json.data.category_groups) {
+                    for (let category of category_group.categories) {
+                        categories.push(category.id);
+                    }
+                }
+
+                console.log(categories);
+            })
+            .catch(e => console.log(e));
+        }
         
     }
 }
