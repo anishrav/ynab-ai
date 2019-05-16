@@ -6,4 +6,6 @@ keys.js
 action-server/node_modules/*
 .gitsecret/keys/random_seed
 models/*
+models/current/*
+models/dialogue/*
 *.dot
