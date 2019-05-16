@@ -43,6 +43,9 @@
 - Hello
 - Hello
 - Hey
+- Hello
+- Hello
+- Hello
 
 ## intent:name
 - My name is [Juste](name)
@@ -99,6 +102,46 @@
 - Hey, I'm [Robert](name)
 - My name is [Robert](name:robert)
 - Name is [Anish](name:anish)
+- [Anish](name:anish)
+- [Anish](name:anish)
+- Hey, my name is [Anish](name:anish)
+
+## intent:spent_since
+- How much have I spent this [month](time_unit)?
+- This [month](time_unit), how much did I spend?
+- How much money left my account this [month](time_unit)?
+- Give me an overview of the [month](time_unit).
+- I want to know how much I spent last [month](time_unit)
+- Oh okay - now I want to know how much I spent last [week](time_unit)
+- I want to know how much I spent last [week](time_unit)
+- Cool - how about last [month](time_unit)?
+- What about in the last [2](time_count) [weeks](time_unit)?
+- What about in the last [2](time_count) [years](time_unit)?
+- How much did I spend this past [year](time_unit)?
+- I want to know how much I spent last [year](time_unit)
+- How much did I spend this past [year](time_unit)?
+- How much did I spend last [week](time_unit)?
+- How much did I spend last [week](time_unit)?
+- How much did I spent last [week](time_unit)?
+- How much did I spend?
+- How much did I spent?
+- Cool, how much did I spend?
+- But how much I spent?
+- How much did I spend this past [month](time_unit)?
+- How much have I spent in the past [2](time_count) [weeks](time_unit:week)?
+- How much did I spend this past [month](time_unit)?
+- How much did I spend last [month](time_unit)?
+- How much did I spend last [month](time_unit)?
+- How much did I spend in the last [2](time_count) [months](time_unit:month)?
+- In the past [3](time_count) [weeks](time_unit:week), how much money have I spent?
+- How much did I spend last [month](time_unit)?
+- I'd like to know how much I spent last [month](time_unit).
+- Okay, thanks. What about last [year](time_unit)?
+- I'd like to know how much I spent in the past [2](time_count) [weeks](time_unit:week).
+- Oh what about the last [4](time_count)?
+- Hm, what about the last [3](time_count) [months](time_unit:month)?
+- What about the last [2](time_count)?
+- Nice, I want to know the last [5](time_count) now
 
 ## intent:thanks
 - Thanks
@@ -117,45 +160,6 @@
 - cool, thanks
 - cool thank you
 - Cool! Thanks!
-
-## intent:time_activity
-- How much have I [spent](budget_action:spend) this [month](time_unit)?
-- This [month](time_unit), how much did I [spend](budget_action)?
-- How much money [left](budget_action) my account this [month](time_unit)?
-- How much did I [budget](budget_action) this [month](time_unit)?
-- How much did I [put](budget_action) in the budget this [month](time_unit)?
-- Give me an overview of the [month](time_unit).
-- I want to know how much I [spent](budget_action:spend) last [month](time_unit)
-- But how much did I [budget](budget_action)?
-- Oh okay - now I want to know how much I [spent](budget_action:spend) last [week](time_unit)
-- I want to know how much I [spent](budget_action:spend) last [week](time_unit)
-- Cool - how about last [month](time_unit)?
-- What about in the last [2](time_count) [weeks](time_unit)?
-- What about in the last [2](time_count) [years](time_unit)?
-- Okay, how much did I [budget](budget_action) last [month](time_unit)?
-- How much did I [spend](budget_action) this past [year](time_unit)?
-- I want to know how much I [spent](budget_action:spend) last [year](time_unit)
-- How much did I [spend](budget_action) this past [year](time_unit)?
-- How much did I [budget](budget_action)?
-- How much did I [spend](budget_action) last [week](time_unit)?
-- Tell me how much I [budgeted](budget_action:budget) last [month](time_unit)
-- How much did I [spend](budget_action) last [week](time_unit)?
-- How much did I [spent](budget_action:spend) last [week](time_unit)?
-- How much did I [budgeted](budget_action:budget) last [year](time_unit)?
-- How much did I [save](budget_action:budget) last [month](time_unit)?
-- How much did I [spend](budget_action)?
-- How much did I [spent](budget_action:spend)?
-- Tell me how much I [kept aside](budget_action:budget) last [year](time_unit)
-- Cool, how much did I [spend](budget_action)?
-- But how much I [spent](budget_action:spend)?
-- How much did I [spend](budget_action) this past [month](time_unit)?
-- How much have I [spent](budget_action:spend) in the past [2](time_count) [weeks](time_unit:week)?
-- How much did I [spend](budget_action) this past [month](time_unit)?
-- How much did I [spend](budget_action) last [month](time_unit)?
-- How much did I [spend](budget_action) last [month](time_unit)?
-- How much did I [spend](budget_action) in the last [2](time_count) [months](time_unit:month)?
-- In the past [3](time_count) [weeks](time_unit:week), how much money have I [saved](budget_action:budget)?
-- In the past [3](time_count) [weeks](time_unit:week), how much money have I [spent](budget_action:spend)?
 
 ## synonym:anish
 - Anish
