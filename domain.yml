@@ -1,29 +1,24 @@
 %YAML 1.1
 ---
 actions:
-- action_activity
+- utter_goodbye
+- utter_thanks
 - utter_name
 - utter_greet
-- utter_thanks
-- utter_goodbye
+- action_spent_since
 entities:
-- time_count
-- time_unit
 - budget_action
+- time_unit
 - name
+- time_count
 intents:
-- time_activity
+- spent_since
 - greet
 - name
 - thanks
 - goodbye
 - deny
 slots:
-  budget_action:
-    type: categorical
-    values:
-    - spend
-    - budget
   name:
     type: text
   time_count:

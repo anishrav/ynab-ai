@@ -1,25 +1,25 @@
 %YAML 1.1
 ---
 actions:
-- utter_greet
-- action_activity
 - utter_goodbye
 - utter_name
+- utter_greet
+- action_spent_since
 - utter_thanks
 config:
   store_entities_as_slots: true
 entities:
 - budget_action
+- name
 - time_unit
 - time_count
-- name
 forms: []
 intents:
-- time_activity:
-    use_entities: true
 - greet:
     use_entities: true
 - name:
+    use_entities: true
+- spent_since:
     use_entities: true
 - thanks:
     use_entities: true
@@ -28,13 +28,6 @@ intents:
 - deny:
     use_entities: true
 slots:
-  budget_action:
-    auto_fill: true
-    initial_value: null
-    type: rasa_core.slots.CategoricalSlot
-    values:
-    - spend
-    - budget
   name:
     auto_fill: true
     initial_value: null

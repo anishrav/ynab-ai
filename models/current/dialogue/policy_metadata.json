@@ -2,25 +2,24 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "time_count",
         "name",
-        "budget_action",
-        "time_unit"
+        "time_unit",
+        "time_count"
       ]
     },
-    "action_activity": {
+    "utter_thanks": {
       "slots": []
     },
     "utter_goodbye": {
+      "slots": []
+    },
+    "action_spent_since": {
       "slots": []
     },
     "utter_name": {
       "slots": []
     },
     "utter_greet": {
-      "slots": []
-    },
-    "utter_thanks": {
       "slots": []
     }
   },
@@ -38,7 +37,7 @@
     "rasa_core.policies.memoization.MemoizationPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190514-170238",
+  "trained_at": "20190516-113416",
   "rasa_core": "0.13.8",
   "tensorflow": "1.12.0",
   "sklearn": "0.20.2"

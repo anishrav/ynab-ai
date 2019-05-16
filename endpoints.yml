@@ -1,2 +1,2 @@
 action_endpoint:
-  url: "http://110058da.ngrok.io"
+  url: "http://localhost:5055/"
