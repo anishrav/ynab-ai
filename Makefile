@@ -37,9 +37,11 @@ cmdline:
 action-server:
 	python -m rasa_core_sdk.endpoint --actions actions&
 
-interactive-learning:
+int:
 	python -m rasa_core.train interactive -o models/dialogue -d domain.yml -c policies.yml -s data/stories.md --nlu models/current/nlu --endpoints endpoints.yml 
 
+check:
+	ps -fA | grep python
 run:
 	make train-nlu
 	make train-core
