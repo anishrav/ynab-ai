@@ -5,6 +5,8 @@ actions:
 - action_spent_timeframe
 - utter_goodbye
 - utter_date_info
+- utter_start_date
+- utter_end_date
 - action_spent_since
 - utter_thanks
 - utter_name
@@ -44,6 +46,10 @@ templates:
   utter_date_info:
   - text: Sure, what are the start and end dates? Here's an example date April 14
       2015
+  utter_end_date:
+  - text: Okay, what's the end date?
+  utter_start_date:
+  - text: Nice, what's the start date?
   utter_goodbye:
   - text: Talk to you later!
   utter_greet:

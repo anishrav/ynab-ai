@@ -96,7 +96,7 @@
 * spent_timeframe
     - utter_date_info
 * date_info{"start_date": "january 19"}
-    - utter_date_info
+    - utter_end_date
 * date_info{"end_date": "february 4"}
     - action_spent_timeframe
 
@@ -109,7 +109,7 @@
 * spent_timeframe
     - utter_date_info
 * date_info{"end_date": "february 4"}
-    - utter_date_info
+    - utter_start_date
 * date_info{"start_date": "january 19"}
     - action_spent_timeframe
 
@@ -124,9 +124,9 @@
 * date_info
      - utter_date_info
 * date_info{"start_date": "january 19"}
-    - action_spent_timeframe
+    - utter_end_date
 * date_info{"end_date": "february 4"}
-    - utter_date_info
+    - action_spent_timeframe
 
 ## Generated Story 123
 * greet
@@ -139,6 +139,6 @@
 * date_info
      - utter_date_info
 * date_info{"end_date": "february 4"}
-    - utter_date_info
+    - utter_start_date
 * date_info{"start_date": "january 19"}
     - action_spent_timeframe
