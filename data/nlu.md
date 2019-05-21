@@ -1,209 +1,50 @@
-## intent:affirm
-- yes
-- yes sure
-- absolutely
-- for sure
-- yes yes yes
-- definitely
+## intent:greet
+- hey
+- hello
+- hi
+- good morning
+- good evening
+- hey there
 
 ## intent:goodbye
-- Bye
-- Goodbye
-- See you later
-- Bye bot
-- Goodbye friend
 - bye
-- bye for now
-- catch you later
-- gotta go
-- See you
-- goodnight
-- have a nice day
-- i'm off
-- see you later alligator
-- we'll speak soon
 - goodbye
+- see you around
+- see you later
 
-## intent:greet
-- Hi
-- Hey
-- Hi bot
-- Hey bot
-- Hello
-- Good morning
-- hi again
-- hi folks
-- hi Mister
-- hi pal!
-- hi there
-- greetings
-- hello everybody
-- hello is anybody there
-- hello robot
-- Hello
-- Hello
-- Hey
-- Hello
-- Hello
-- Hello
+## intent:affirm
+- yes
+- indeed
+- of course
+- that sounds good
+- correct
 
-## intent:name
-- My name is [Juste](name)
-- I am [Josh](name)
-- I'm [Lucy](name)
-- People call me [Greg](name)
-- It's [David](name)
-- Usually people call me [Amy](name)
-- My name is [John](name)
-- You can call me [Sam](name)
-- Please call me [Linda](name)
-- Name name is [Tom](name)
-- I am [Richard](name)
-- I'm [Tracy](name)
-- Call me [Sally](name)
-- I am [Philipp](name)
-- I am [Charlie](name)
-- I am [Charlie](name)
-- I am [Ben](name)
-- Call me [Susan](name)
-- [Lucy](name)!
-- [Peter](name)
-- [Mark](name)
-- [Joseph](name)
-- [Tan](name)!
-- [Pete](name)
-- [Elon](name)
-- [Penny](name)
-- [Anish](name)
-- name is [Andrew](name)
-- I [Lora](name)
-- [Stan](name) is my name
-- [Susan](name) is the name
-- [Ross](name) is my first name
-- [Bing](name) is my last name
-- Few call me as [Angelina](name)
-- Some call me [Julia](name)
-- Everyone calls me [Laura](name)
-- I am [Ganesh](name)
-- My name is [Mike](name)
-- just call me [Monika](name)
-- Few call [Dan](name)
-- You can always call me [Suraj](name)
-- Some will call me [Andrew](name)
-- My name is [Ajay](name)
-- I call [Ding](name)
-- I'm [Partia](name)
-- Please call me [Leo](name)
-- name is [Pari](name)
-- My name is [Anish](name:anish)
-- name [Sanjay](name)
-- [Anish](name)
-- My name is [anish](name)
-- Hey, I'm [Robert](name)
-- My name is [Robert](name:robert)
-- Name is [Anish](name:anish)
-- [Anish](name:anish)
-- [Anish](name:anish)
-- Hey, my name is [Anish](name:anish)
+## intent:deny
+- no
+- never
+- I don't think so
+- don't like that
+- no way
+- not really
 
-## intent:spent_since
-- How much have I spent this [month](time_unit)?
-- This [month](time_unit), how much did I spend?
-- How much money left my account this [month](time_unit)?
-- Give me an overview of the [month](time_unit).
-- I want to know how much I spent last [month](time_unit)
-- Oh okay - now I want to know how much I spent last [week](time_unit)
-- I want to know how much I spent last [week](time_unit)
-- Cool - how about last [month](time_unit)?
-- What about in the last [2](time_count) [weeks](time_unit)?
-- What about in the last [2](time_count) [years](time_unit)?
-- How much did I spend this past [year](time_unit)?
-- I want to know how much I spent last [year](time_unit)
-- How much did I spend this past [year](time_unit)?
-- How much did I spend last [week](time_unit)?
-- How much did I spend last [week](time_unit)?
-- How much did I spent last [week](time_unit)?
-- How much did I spend?
-- How much did I spent?
-- Cool, how much did I spend?
-- But how much I spent?
-- How much did I spend this past [month](time_unit)?
-- How much have I spent in the past [2](time_count) [weeks](time_unit:week)?
-- How much did I spend this past [month](time_unit)?
-- How much did I spend last [month](time_unit)?
-- How much did I spend last [month](time_unit)?
-- How much did I spend in the last [2](time_count) [months](time_unit:month)?
-- In the past [3](time_count) [weeks](time_unit:week), how much money have I spent?
-- How much did I spend last [month](time_unit)?
-- I'd like to know how much I spent last [month](time_unit).
-- Okay, thanks. What about last [year](time_unit)?
-- I'd like to know how much I spent in the past [2](time_count) [weeks](time_unit:week).
-- Oh what about the last [4](time_count)?
-- Hm, what about the last [3](time_count) [months](time_unit:month)?
-- What about the last [2](time_count)?
-- Nice, I want to know the last [5](time_count) now
+## intent:mood_great
+- perfect
+- very good
+- great
+- amazing
+- wonderful
+- I am feeling very good
+- I am great
+- I'm good
 
-## intent:thanks
-- Thanks
-- Thank you
-- Thank you so much
-- Thanks bot
-- Thanks for that
-- cheers
-- cheers bro
-- ok thanks!
-- perfect thank you
-- thanks a bunch for everything
-- thanks for the help
-- thanks a lot
-- amazing, thanks
-- cool, thanks
-- cool thank you
-- Cool! Thanks!
-
-## synonym:anish
-- Anish
-
-## synonym:budget
-- budgeted
-- save
-- saved
-- kept aside
-- allocate
-- allot
-- allotted
-- assign
-- assigned
-- allow
-- allowed
-- earmark
-- earmarked
-- devote
-- devoted
-- designate
-- designated
-- appropriate
-- appropriated
-- set aside
-
-## synonym:month
-- months
-
-## synonym:robert
-- Robert
-
-## synonym:spend
-- spent
-- expend
-- invest
-- invested
-- used
-- use
-- waste
-- wasted
-
-## synonym:week
-- weeks
-
-## synonym:year
-- years
+## intent:mood_unhappy
+- sad
+- very sad
+- unhappy
+- bad
+- very bad
+- awful
+- terrible
+- not very good
+- extremely sad
+- so sad
