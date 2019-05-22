@@ -67,9 +67,7 @@
 * name{"name": "bob"}
     - slot{"name": "bob"}
     - utter_greet
-* spent_timeframe{"time_unit": "year", "start_date": "april 14", "end_date": "april 19"}
-    - slot{"end_date": "april 19"}
-    - slot{"start_date": "april 14"}
+* spent_timeframe{"time_unit": "year", "start_date": "april 14 2018", "end_date": "april 19 2018"}
     - slot{"time_unit": "year"}
     - action_spent_timeframe
 
@@ -82,9 +80,9 @@
 * spent_timeframe{"time_unit": "year"}
     - slot{"time_unit": "year"}
     - utter_date_info
-* date_info{"start_date": "january 19", "end_date": "february 4"}
-    - slot{"end_date": "february 4"}
-    - slot{"start_date": "january 19"}
+* date_info{"start_date": "january 19 2018", "end_date": "february 4 2018"}
+    - slot{"end_date": "february 4 2018"}
+    - slot{"start_date": "january 19 2018"}
     - action_spent_timeframe
 
 ## Generated Story -638832664601555522
@@ -95,9 +93,9 @@
     - utter_greet
 * spent_timeframe
     - utter_date_info
-* date_info{"start_date": "january 19"}
+* date_info{"start_date": "january 19 2018"}
     - utter_end_date
-* date_info{"end_date": "february 4"}
+* date_info{"end_date": "february 4 2018"}
     - action_spent_timeframe
 
 ## Generated Story -6388326646015551232
@@ -108,9 +106,9 @@
     - utter_greet
 * spent_timeframe
     - utter_date_info
-* date_info{"end_date": "february 4"}
+* date_info{"end_date": "february 4 2018"}
     - utter_start_date
-* date_info{"start_date": "january 19"}
+* date_info{"start_date": "january 19 2018"}
     - action_spent_timeframe
 
 ## Generated Story -6388226646015551232
@@ -123,9 +121,9 @@
     - utter_date_info
 * date_info
      - utter_date_info
-* date_info{"start_date": "january 19"}
+* date_info{"start_date": "january 19 2018"}
     - utter_end_date
-* date_info{"end_date": "february 4"}
+* date_info{"end_date": "february 4 2018"}
     - action_spent_timeframe
 
 ## Generated Story 123
@@ -138,7 +136,77 @@
     - utter_date_info
 * date_info
      - utter_date_info
-* date_info{"end_date": "february 4"}
+* date_info{"end_date": "february 4 2018"}
     - utter_start_date
-* date_info{"start_date": "january 19"}
+* date_info{"start_date": "january 19 2018"}
     - action_spent_timeframe
+## Generated Story 5999506106065945327
+* greet
+    - utter_name
+* name{"name": "anish"}
+    - slot{"name": "anish"}
+    - utter_greet
+* spent_timeframe{"time_unit": "year"}
+    - slot{"time_unit": "year"}
+    - utter_date_info
+* date_info{"start_date": "March 18 2018"}
+    - slot{"start_date": "March 18 2018"}
+    - utter_end_date
+* date_info{"end_date": "March 24 2018"}
+    - slot{"end_date": "March 24 2018"}
+    - action_spent_timeframe
+* spent_since{"time_unit": "month"}
+    - slot{"time_unit": "month"}
+    - action_spent_since
+
+## Generated Story -6001338711205676409
+* spent_timeframe{"time_unit": "year"}
+    - slot{"time_unit": "year"}
+    - utter_date_info
+* date_info{"start_date": "August 14 2018"}
+    - slot{"start_date": "August 14 2018"}
+    - action_spent_timeframe
+
+## Generated Story -4649797540559153729
+* name{"name": "anish"}
+    - slot{"name": "anish"}
+    - utter_greet
+* spent_timeframe
+    - utter_date_info
+* date_info{"start_date": "June 17 2018"}
+    - slot{"start_date": "June 17 2018"}
+    - utter_end_date
+* date_info{"end_date": "June 20 2018"}
+    - slot{"end_date": "June 20 2018"}
+    - action_spent_timeframe
+
+## Generated Story 2610137876445369209
+* greet
+    - utter_name
+* name{"name": "anish"}
+    - slot{"name": "anish"}
+    - utter_greet
+* spent_timeframe
+    - utter_date_info
+* date_info{"end_date": "August 18 2018"}
+    - slot{"end_date": "August 18 2018"}
+    - utter_start_date
+* date_info{"start_date": "July 15 2018"}
+    - slot{"start_date": "July 15 2018"}
+    - action_spent_timeframe
+
+## Generated Story 3397382383681900522
+* greet
+    - utter_name
+* name{"name": "anish"}
+    - slot{"name": "anish"}
+    - utter_greet
+* spent_timeframe
+    - utter_date_info
+* date_info{"end_date": "August 19 2018"}
+    - slot{"end_date": "August 19 2018"}
+    - utter_start_date
+* date_info{"start_date": "April 14 2018"}
+    - slot{"start_date": "April 14 2018"}
+    - action_spent_timeframe
+

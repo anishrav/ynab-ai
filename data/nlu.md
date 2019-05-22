@@ -7,16 +7,25 @@
 - definitely
 
 ## intent:date_info
-- Start was [January 14](start_date) and end was [August 20](end_date)
-- Start date was [April 14](start_date) and end date was [April 20](end_date)
-- I started on [March 12](start_date) and finished up on [March 19](end_date)
-- I think it wrapped up on [April 31](end_date) and I left home on [April 12](start_date)
-- I came home on [August 15](end_date) but left for the trip on [July 14](start_date)
-- It was last [year](time_unit), started on [February 12](start_date) and ended on [March 12](end_date)
-- It was [2](time_count) [years](time_unit:year) ago, started on [June 12](start_date) and ended on [July 12](end_date)
-- Uhh like [2](time_count) [years](time_unit:year) ago, we left on [June 12](start_date) and ended on [July 12](end_date)
-- Probably started on [November 12](start_date) and ended on [December 11](end_date)
+- Start was [January 14 2018](start_date) and end was [August 20 2018](end_date)
+- Start date was [April 14 2018](start_date) and end date was [April 20 2018](end_date)
+- I started on [March 12 2018](start_date) and finished up on [March 19 2018](end_date)
+- I think it wrapped up on [April 31 2018](end_date) and I left home on [April 12 2018](start_date)
+- I came home on [August 15 2018](end_date) but left for the trip on [July 14 2018](start_date)
+- It was last [year](time_unit), started on [February 12 2018](start_date) and ended on [March 12 2018](end_date)
+- It was [2](time_count) [years](time_unit:year) ago, started on [June 12 2018](start_date) and ended on [July 12 2018](end_date)
+- Uhh like [2](time_count) [years](time_unit:year) ago, we left on [June 12 2018](start_date) and ended on [July 12 2018](end_date)
+- Probably started on [November 12 2018](start_date) and ended on [December 11 2018](end_date)
 - Started on [January 19](start_date:january 19) and ended on [February 4](end_date:february 4)
+- Yeah, the trip started on [March 18 2018 2018](start_date)
+- Oh yeah, the end date was [March 24 2018 2018](end_date)
+- Started on [June 15 2018](start_date) and ended on [August 14 2018](start_date)
+- Yeah, started on [June 17 2018](start_date)
+- It was [June 20 2018](end_date)
+- It ended on [August 18 2018](end_date) I think
+- Yeah it started on [July 15 2018](start_date) yup
+- Yeah it was over on [August 19 2018](end_date)
+- Uh it started on [April 14 2018](start_date)
 
 ## intent:goodbye
 - Bye
@@ -55,6 +64,9 @@
 - Hello
 - Hello
 - Hey
+- Hello
+- Hello
+- Hello
 - Hello
 - Hello
 - Hello
@@ -121,6 +133,10 @@
 - Hey, my name is [Anish](name:anish)
 - My name is [Anish](name:anish)
 - My name is [Bob](name:bob)
+- My name is [Anish](name:anish)
+- Hello my name is [Anish](name:anish)
+- My name is [Anish](name:anish)
+- My name is [Anish](name:anish)
 
 ## intent:spent_since
 - How much have I spent this [month](time_unit)?
@@ -158,17 +174,26 @@
 - Hm, what about the last [3](time_count) [months](time_unit:month)?
 - What about the last [2](time_count)?
 - Nice, I want to know the last [5](time_count) now
+- Cool, how much did I spent last [month](time_unit)?
 
 ## intent:spent_timeframe
 - How much did I spend on that vacation last [year](time_unit)?
 - How expensive was that vacation [2](time_count) [years](time_unit:year) ago?
-- I feel like I spent a lot when I went to Aruba from [April 14](start_date) to [April 20](end_date). How much?
+- I feel like I spent a lot when I went to Aruba from [April 14 2018](start_date) to [April 20 2018](end_date). How much?
 - Los Angeles last [month](time_unit) felt really expensive - how much did I spend?
 - Jamaica felt really expensive - how much did I spend?
-- What was the total bill for my Europe trip from [June 14](start_date) to [July 20](end_date)?
+- What was the total bill for my Europe trip from [June 14 2018](start_date) to [July 20 2018](end_date)?
 - How hard did New York hit my bank account?
 - How much did I spend in Aruba last [year](time_unit)?
 - How much did I spend in New York last [year](time_unit) from [April 14](start_date:april 14) to [April 19](end_date:april 19)?
+- I want to know how much I spent in Europe last [year](time_unit)
+- How much did I spend on vacation last [year](time_unit) in Croatia?
+- I want to know how much I spent in England
+- How much did I spend in Bosnia?
+- I want to know how much I spent in Croatia last spring
+- How much did I spend in Croatia last spring?
+- How much did I spend on vacation last [year](time_unit)?
+- I want to know how much I spent on vacation
 
 ## intent:thanks
 - Thanks
@@ -191,27 +216,14 @@
 ## synonym:anish
 - Anish
 
-## synonym:budget
-- budgeted
-- save
-- saved
-- kept aside
-- allocate
-- allot
-- allotted
-- assign
-- assigned
-- allow
-- allowed
-- earmark
-- earmarked
-- devote
-- devoted
-- designate
-- designated
-- appropriate
-- appropriated
-- set aside
+## synonym:april 14
+- April 14
+
+## synonym:april 19
+- April 19
+
+## synonym:bob
+- Bob
 
 ## synonym:february 4
 - February 4
@@ -224,16 +236,6 @@
 
 ## synonym:robert
 - Robert
-
-## synonym:spend
-- spent
-- expend
-- invest
-- invested
-- used
-- use
-- waste
-- wasted
 
 ## synonym:week
 - weeks

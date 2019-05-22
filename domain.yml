@@ -1,26 +1,26 @@
 %YAML 1.1
 ---
 actions:
-- utter_greet
-- action_spent_timeframe
-- utter_goodbye
-- utter_date_info
-- utter_start_date
-- utter_end_date
 - action_spent_since
-- utter_thanks
+- action_spent_timeframe
+- utter_date_info
+- utter_end_date
+- utter_goodbye
+- utter_greet
 - utter_name
+- utter_start_date
+- utter_thanks
 entities:
-- name
 - budget_action
-- time_unit
-- time_count
 - end_date
+- name
 - start_date
+- time_count
+- time_unit
 intents:
+- name
 - greet
 - spent_timeframe
-- name
 - date_info
 - spent_since
 - thanks
@@ -48,13 +48,13 @@ templates:
       2015
   utter_end_date:
   - text: Okay, what's the end date?
-  utter_start_date:
-  - text: Nice, what's the start date?
   utter_goodbye:
   - text: Talk to you later!
   utter_greet:
   - text: Nice to you meet you {name}. How can I help?
   utter_name:
   - text: Hey there! Tell me your name.
+  utter_start_date:
+  - text: Nice, what's the start date?
   utter_thanks:
   - text: My pleasure.
